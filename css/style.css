@@ -74,8 +74,14 @@ body {
   font-weight: 400;
   letter-spacing: 35px;
   animation: moveInLeft 1.6s ease-out;
+
   /* animation-iteration-count: 3; */
   /* animation-delay: 3s; */
+}
+
+.heading-primary-main::selection {
+  background-color: rgba(126, 213, 111);
+  color: #fff;
 }
 
 .heading-primary-sub {
@@ -172,11 +178,16 @@ body {
   opacity: 0;
 }
 
-.btn:active::after {
+/* .btn:active::after {
   animation: biggerOut 0.4s ease-in-out;
+} */
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-in-out 0.75s;
+  animation-fill-mode: backwards;
 }
 
-@keyframes biggerOut {
+/* @keyframes biggerOut {
   0% {
     transform: scale(1);
     opacity: 1;
@@ -184,6 +195,18 @@ body {
   100% {
     transform: scale(1.5);
     opacity: 0;
+  }
+} */
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
