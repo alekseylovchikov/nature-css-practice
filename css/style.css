@@ -132,6 +132,7 @@ body {
   transform: translateY(0);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .btn:hover {
@@ -147,6 +148,43 @@ body {
 .btn-white {
   background-color: #fff;
   color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.btn:active::after {
+  animation: biggerOut 0.4s ease-in-out;
+}
+
+@keyframes biggerOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
 /* END HEADER */
