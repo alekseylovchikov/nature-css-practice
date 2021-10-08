@@ -130,15 +130,18 @@ body {
   display: inline-block;
   border-radius: 100px;
   transform: translateY(0);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
   transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
