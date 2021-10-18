@@ -1,0 +1,23 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "## Project Nature",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekseylovchikov/nature-css-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alekseylovchikov/nature-css-practice/issues"
+  },
+  "homepage": "https://github.com/alekseylovchikov/nature-css-practice#readme",
+  "devDependencies": {
+    "sass": "^1.43.2"
+  }
+}
